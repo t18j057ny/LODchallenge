@@ -15,6 +15,7 @@
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
+        
     </head>
     <body>
         <section id="box1" class="box">
@@ -96,17 +97,16 @@
 
         <section id="box4" class="box">
             <div class="sub_title">
-                <h2>野草の検索と位置情報の可視化</h2>
+                <h2 id="tit4">野草の検索と位置情報の可視化</h2>
                 <div class="gulas">
                     <div>
                         <label id="key">キーワード<input id="g_query" type="text" value=""></label>
-                        <input id="submit" type="button" value="検索" onclick="grass_request()">
+                        <lavel for="g_query"><input id="submit" type="button" value="検索" onclick="grass_request()"></lavel>
                     </div>
                     <div id="grass_result">
                         <h4 id="grass_name"></h4>
                         <div id="grass_result_list"></div>
-                        <h3>検索結果</h3>
-                        <p id="grass_count">0</p>
+                        <p id="grass_count" hidden>0</p>
                     </div>
                 </div>
                 <div class="container">
@@ -114,13 +114,13 @@
                         <script type="text/javascript" src="js/map_display.js"></script>
                     </div>
                 </div>
-                <p id="att">野草の自生地域の県庁所在地にマーク</p>
+                <p id="att">＊野草の自生地域の県庁所在地にマーク</p>
             </div>
         </section>
 
         <section id="box5" class="box">
             <div class="sub_title">
-                <h2>データの検索</h2>
+                <h2 id="tit5">データの検索</h2>
                 <div id="form">
                     <h3>検索するLODの種類を選択してください。</h3>
                     <input id="water" type="radio" name="stockpile" value="water">
@@ -139,25 +139,30 @@
                     <label for="grass">野草</label>
                 </div>
                 <br>
-                <label id="key">キーワード<input id="query" type="text" value=""></label>
-                <input id="submit" type="button" value="検索" onclick="request()">
-                <hr>
+                <div class="group">
+                    <label for="query" id="l_query">キーワード</label>
+                    <input id="query" type="text" value="">
+                    <div class="text_underline"></div>
+                    <input id="submit2" type="button" value="検索" onclick="request()">
+                 </div>
             </div>
             <div id="result">
                 <h4 id="name"></h4>
                 <div id="result_list"></div>
-                <h3>検索結果</h3>
-                <p id="count">0</p>
+                <p id="count" hidden>0</p>
             </div>
         </section>
 
         <footer id="footer">
-            <hr>
+            <hr id="foot_hr">
             <p>岡山理科大学</p>
             <p>小田研災害関連調査班</p>
         </footer>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
         <script src="js/6-1.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+        <script src="js/search_ef.js"></script>
     </body>
 </html>
