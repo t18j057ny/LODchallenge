@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta charset="utf-8">
         <title>災害時の非常食LOD</title>
-        <link rel="icon" type="image/png" href="/alphamai.png">
+        <link rel="icon" type="image/png" href="fig/alphamai.png">
         <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link rel="stylesheet" type="text/css" href="common.css">
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     </head>
     <body>
         <section id="box1" class="box">
@@ -13,7 +23,12 @@
                 <h1 class="title">LOD</h1>
                 <br>
                 <p id="intro">
-                    <per id="per1">災</per><per id="per2">害発生時には、物流の機能停止や断水、停電等のライフラインの寸断が発生すると考えられるため、常日頃から対策をしなければならない。災害による被害は、食料の供繋がり、日常とかけ離れた環境での生活を余儀なくされ、ライフライン復旧には、約1日から7日かかるとされており、災害の発生に備えた対策として、食料品の備蓄が挙げられる。そこで、災害時非常食LODでは、災害の発生に備えた備蓄食品と災害発生後の食料確保を支援するために、市販されている備蓄食品と日本に自生する野草のLODを作成した。備蓄食品のLODでは、保存水、アルファ米、即席スープ、缶詰パン、乾麺、肉や魚などの缶詰のデータが含まれている。</per>
+                    <per id="per1">災</per>
+                    <per id="per2">害発生時には、物流の機能停止や断水、停電等のライフラインの寸断が発生すると考えられるため、常日頃から対策をしなければならない。
+                        災害による被害は、食料の供繋がり、日常とかけ離れた環境での生活を余儀なくされ、ライフライン復旧には、約1日から7日かかるとされており、災害の発生に備えた対策として、食料品の備蓄が挙げられる。
+                        そこで、災害時非常食LODでは、災害の発生に備えた備蓄食品と災害発生後の食料確保を支援するために、市販されている備蓄食品と日本に自生する野草のLODを作成した。
+                        備蓄食品のLODでは、保存水、アルファ米、即席スープ、缶詰パン、乾麺、肉や魚などの缶詰のデータが含まれている。
+                    </per>
                 </p>
             </div>
         </section>
@@ -32,33 +47,33 @@
             <div class="stockpile">
                 <img id="img" src="fig/mizu.png">
                 <h3>保存水</h3>
-                <a href="http://linkdata.org/work/rdf1s9030i">LOD</a>
+                <a href="#">LOD</a>
             </div>
     
             <div class="stockpile">
                 <img id="img" src="fig/alphamai.png">
                 <h3>アルファ米</h3>
-                <a href="http://linkdata.org/work/rdf1s9031i">LOD</a>
+                <a href="#">LOD</a>
             </div>
             <div class="stockpile">
                 <img id="img" src="fig/soup.png">
                 <h3>即席スープ</h3>
-                <a href="http://linkdata.org/work/rdf1s9033i">LOD</a>
+                <a href="#">LOD</a>
             </div>
             <div class="stockpile">
                 <img id="img" src="fig/pan.png">
                 <h3>缶詰パン</h3>
-                <a href="http://linkdata.org/work/rdf1s9036i">LOD</a>
+                <a href="#">LOD</a>
             </div>
             <div class="stockpile">
                 <img id="img" src="fig/men.png">
                 <h3>麺類</h3>
-                <a href="http://linkdata.org/work/rdf1s9034i">LOD</a>
+                <a href="#">LOD</a>
             </div>
             <div class="stockpile">
                 <img id="img" src="fig/can2.png">
                 <h3>肉・魚の缶詰</h3>
-                <a href="http://linkdata.org/work/rdf1s9032i">LOD</a>
+                <a href="#">LOD</a>
             </div>
         </section>
 
@@ -75,9 +90,67 @@
             <div class="stockpile2">
                 <img id="img" src="fig/sansai2.png">
                 <h3>野草</h3>
-                <a href="http://linkdata.org/work/rdf1s9035i">LOD</a>
+                <a href="#">LOD</a>
             </div>
         </section>
+
+        <section id="box4" class="box">
+            <div class="sub_title">
+                <h2>野草の検索と位置情報の可視化</h2>
+                <div class="gulas">
+                    <div>
+                        <label id="key">キーワード<input id="g_query" type="text" value=""></label>
+                        <input id="submit" type="button" value="検索" onclick="grass_request()">
+                    </div>
+                    <div id="grass_result">
+                        <h4 id="grass_name"></h4>
+                        <div id="grass_result_list"></div>
+                        <h3>検索結果</h3>
+                        <p id="grass_count">0</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="map">
+                        <script type="text/javascript" src="js/map_display.js"></script>
+                    </div>
+                </div>
+                <p id="att">野草の自生地域の県庁所在地にマーク</p>
+            </div>
+        </section>
+
+        <section id="box5" class="box">
+            <div class="sub_title">
+                <h2>データの検索</h2>
+                <div id="form">
+                    <h3>検索するLODの種類を選択してください。</h3>
+                    <input id="water" type="radio" name="stockpile" value="water">
+                    <label for="water">保存水</label>
+                    <input id="alphamai" type="radio" name="stockpile" value="alphamai">
+                    <label for="alphamai">アルファ米</label>
+                    <input id="soup" type="radio" name="stockpile" value="soup">
+                    <label for="soup">即席スープ</label>
+                    <input id="pan" type="radio" name="stockpile" value="pan">
+                    <label for="pan">缶詰パン</label>
+                    <input id="men" type="radio" name="stockpile" value="men">
+                    <label for="men">麺類</label>
+                    <input id="can" type="radio" name="stockpile" value="can">
+                    <label for="can">肉・魚の缶詰</label>
+                    <input id="grass" type="radio" name="stockpile" value="grass">
+                    <label for="grass">野草</label>
+                </div>
+                <br>
+                <label id="key">キーワード<input id="query" type="text" value=""></label>
+                <input id="submit" type="button" value="検索" onclick="request()">
+                <hr>
+            </div>
+            <div id="result">
+                <h4 id="name"></h4>
+                <div id="result_list"></div>
+                <h3>検索結果</h3>
+                <p id="count">0</p>
+            </div>
+        </section>
+
         <footer id="footer">
             <hr>
             <p>岡山理科大学</p>
