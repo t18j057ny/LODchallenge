@@ -78,8 +78,8 @@ function grass_clear() {
     let parent = document.getElementById("grass_result_list");
 
     doc_count.innerHTML = Number(0);
-    name.innerHTML = "";
-parent.innerHTML = "";
+    
+    parent.innerHTML = "";
     PopupContents = [];
 }
 
