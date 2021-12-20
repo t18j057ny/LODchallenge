@@ -79,7 +79,8 @@ function grass_clear() {
 
     doc_count.innerHTML = Number(0);
     name.innerHTML = "";
-	parent.innerHTML = "";
+parent.innerHTML = "";
+    PopupContents = [];
 }
 
 
@@ -137,6 +138,8 @@ function grass_draw(data) {
 function grass_map(id) {
     var id = Number(id);
     console.log(PopupContents[id]);
+    var geojsonFeature = [];
+    var popupContents = [];
 
     for (var i = 0; i < PopupContents[id].length; i++){
         for (let j=0; j<47; ++j){
