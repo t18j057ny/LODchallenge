@@ -97,11 +97,17 @@
 
         <section id="box4" class="box">
             <div class="sub_title">
-                <h2 id="tit4">野草の検索と位置情報の可視化</h2>
+                <h2 id="tit4">野草LODの検索と位置情報の可視化</h2>
                 <div class="gulas">
                     <div>
                         <label id="key">キーワード<input id="g_query" type="text" value=""></label>
                         <lavel for="g_query"><input id="submit" type="button" value="検索" onclick="grass_request()"></lavel>
+                        <div id="examp_grass">
+                            <h4>検索例</h4>
+                            <p>野草の名前で検索する場合：ノビル、ツクシ、スイバ、etc.</p>
+                            <p>都道府県名で検索する場合：岡山、北海道、東京、etc.</p>
+                            <p>生育地で検索する場合：土手、川原、田畑、etc.</p>
+                        </div>
                     </div>
                     <div id="grass_result">
                         <h4 id="grass_name"></h4>
@@ -120,7 +126,40 @@
 
         <section id="box5" class="box">
             <div class="sub_title">
-                <h2 id="tit5">データの検索</h2>
+                <h2 id="tit5">備蓄食品LODのデータの検索</h2>
+                <div id="examp">
+                    <h4>検索例</h4>
+                    <h5>保存水を検索する場合</h5>
+                    <ul>
+                        <li>内容量で検索する場合：500ml、2L、100g、etc.</li>
+                        <li>保存期間で検索する場合：約10年、約3年、約12年6ヶ月、etc.</li>
+                    </ul>
+                    <h5>アルファ米を検索する場合</h5>
+                    <ul>
+                        <li>ジャンルで検索する場合：五目ごはん、ピラフ、カレー、etc.</li>
+                        <li>原材料で検索する場合：うるち米、醤油、玉ねぎ、etc.</li>
+                    </ul>
+                    <h5>即席スープを検索する場合</h5>
+                    <ul>
+                        <li>ジャンルで検索する場合：みそ汁、オニオンスープ、野菜シチュー、etc.</li>
+                        <li>内容量で検索する場合：10g、6g、344g、etc.</li>
+                    </ul>
+                    <h5>缶詰パンを検索する場合</h5>
+                    <ul>
+                        <li>味で検索する場合：ブルベリー、バター、抹茶、etc.</li>
+                        <li>原材料で検索する場合：いちご、りんご、マーガリン、etc.</li>
+                    </ul>
+                    <h5>麺類を検索する場合</h5>
+                    <ul>
+                        <li>ジャンルで検索する場合：うどん、ラーメン、パスタ、etc.</li>
+                        <li>出来上がり量で検索する場合：214g、200g、351.5g、etc.</li>
+                    </ul>
+                    <h5>肉・魚の缶詰を検索する場合</h5>
+                    <ul>
+                        <li>原材料で検索する場合：鶏肉、まぐろ、あさり、etc.</li>
+                        <li>保存期間で検索する場合：約3年、約5年、約6年、etc.</li>
+                    </ul>
+                </div>
                 <div id="form">
                     <h3>検索するLODの種類を選択してください。</h3>
                     <input id="water" type="radio" name="stockpile" value="water">
@@ -135,8 +174,6 @@
                     <label for="men">麺類</label>
                     <input id="can" type="radio" name="stockpile" value="can">
                     <label for="can">肉・魚の缶詰</label>
-                    <input id="grass" type="radio" name="stockpile" value="grass">
-                    <label for="grass">野草</label>
                 </div>
                 <br>
                 <div class="group">
@@ -145,11 +182,11 @@
                     <div class="text_underline"></div>
                     <input id="submit2" type="button" value="検索" onclick="request()">
                  </div>
-            </div>
-            <div id="result">
-                <h4 id="name"></h4>
-                <div id="result_list"></div>
-                <p id="count" hidden>0</p>
+                 <div id="result">
+                    <h4 id="name"></h4>
+                    <div id="result_list"></div>
+                    <p id="count" hidden>0</p>
+                </div>
             </div>
         </section>
 
@@ -158,6 +195,7 @@
             <p>岡山理科大学</p>
             <p>小田研災害関連調査班</p>
         </footer>
+
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
         <script src="js/6-1.js"></script>
