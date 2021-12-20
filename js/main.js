@@ -12,18 +12,18 @@ function convertCSVtoArray(str) {
 
 function clear() {
     let doc_count = document.getElementById("count");
-    let name = document.getElementById("name");
+    //let name = document.getElementById("name");
     let parent = document.getElementById("result_list");
 
     doc_count.innerHTML = Number(0);
-    name.innerHTML = "";
+    //name.innerHTML = "";
 	parent.innerHTML = "";
 }
 
 
 function draw(data, key) {
     let dic;
-    let name = document.getElementById("name");
+    //let name = document.getElementById("name");
     let doc_count = document.getElementById("count");
     let count = doc_count.textContent;
     let parentDiv = document.getElementById("result_list");
@@ -31,25 +31,25 @@ function draw(data, key) {
     let newElement = document.createElement("div");
 
     if (key == "water") {
-        name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 水の硬度";
+        //name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 水の硬度";
         dic = ["食品名","製品URL","製造メーカ名","製品の名称","製品の保存期間","製品の内容量","水の硬度"];
     } else if (key == "alphamai") {
-        name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の出来上がり量 / 製品の原材料 / 製品に含まれるアレルゲン";
+        //name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の出来上がり量 / 製品の原材料 / 製品に含まれるアレルゲン";
         dic = ["食品名","製品URL","製造メーカ名","製品の名称","製品の保存期間","製品の内容量","製品の出来上がり量","製品の原材料","製品に含まれるアレルゲン"];
     } else if (key == "soup") {
-        name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の原材料 / 製品に含まれるアレルゲン";
+        //name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の原材料 / 製品に含まれるアレルゲン";
         dic = ["食品名","製品URL","製造メーカ名","製品の名称","製品の保存期間","製品の内容量","製品の原材料","製品に含まれるアレルゲン"];
     } else if (key == "bread") {
-        name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の原材料 / 製品に含まれるアレルゲン";
+        //name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の原材料 / 製品に含まれるアレルゲン";
         dic = ["食品名","製品URL","製造メーカ名","製品の名称","製品の保存期間","製品の内容量","製品の原材料","製品に含まれるアレルゲン"];
     } else if (key == "men") {
-        name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の出来上がり / 製品の原材料 / 製品に含まれるアレルゲン";
+        //name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の出来上がり / 製品の原材料 / 製品に含まれるアレルゲン";
         dic = ["食品名","製品URL","製造メーカ名","製品の名称","製品の保存期間","製品の内容量","製品の出来上がり量","製品の原材料","製品に含まれるアレルゲン"];
     } else if (key == "can") {
-        name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の原材料 / 製品に含まれるアレルゲン";
+        //name.innerHTML = "食品名 / 製品URL / 製造メーカ名 / 製品の名称 / 製品の保存期間 / 製品の内容量 / 製品の原材料 / 製品に含まれるアレルゲン";
         dic = ["食品名","製品URL","製造メーカ名","製品の名称","製品の保存期間","製品の内容量","製品の原材料","製品に含まれるアレルゲン"];
     } else if (key == "grass") {
-        name.innerHTML = "薬草の名称 / アク抜き時の火力 / 薬用 / 害の有無 / 野草の分布 / 野草の生育地";
+        //name.innerHTML = "薬草の名称 / アク抜き時の火力 / 薬用 / 害の有無 / 野草の分布 / 野草の生育地";
         dic = ["薬草の名称","アク抜き時の火力","薬用","害の有無","野草の分布","野草の生育地"];
     }
 
