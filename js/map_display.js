@@ -29,7 +29,7 @@ L.geoJson(geojsonFeature,
 function grass_request() {
     let req = new XMLHttpRequest();
 
-    req.open("get", "https://t18j057ny.github.io/test/data/wild_grass.csv", true);
+    req.open("get", "https://t18j057ny.github.io/LODchallenge/data/wild_grass.csv", true);
     req.send(null);
     req.onload = function() {
         search(convertCSVtoArray(req.responseText));
