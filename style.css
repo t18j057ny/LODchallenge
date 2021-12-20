@@ -141,7 +141,7 @@ hr {
     float: left;
     width: 40%;
     color:black;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .gulas > h3 {
@@ -162,6 +162,7 @@ hr {
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
+    width: 100%;
 }
 
 #submit {
@@ -171,7 +172,6 @@ hr {
 
 #submit2 {
     margin-top: 15px;
-    margin-bottom: 20px;
 }
 
 
@@ -179,8 +179,8 @@ hr {
 #result_list {
     overflow: auto;
     height: 500px;
-    width: 80%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 5%;
     border-top: solid;
     border-bottom: solid;
     font-size: 20px;
@@ -201,7 +201,7 @@ hr {
 
 #grass_result_list {
     overflow: auto;
-    height: 550px;
+    height: 500px;
     width: 100%;
     border-top: solid;
     border-bottom: solid;
@@ -258,10 +258,12 @@ hr {
 
 #tit4 {
     color: white;
+    width: 70%;
 }
 
 #tit5 {
     color: white;
+    width: 60%;
 }
 
 
@@ -323,9 +325,9 @@ hr {
     position: absolute; 
     bottom: 0px; /*中央配置*/
     width: 0px; /*アニメーションで0pxから50%に*/
-    height: 1px; /*高さ*/
+    height: 3px; /*高さ*/
     content: '';
-    background-color: #3be5ae; /*アニメーションの色*/
+    background-color: rgb(255, 169, 40); /*アニメーションの色*/
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
@@ -348,6 +350,7 @@ hr {
 #l_query {
     font-weight: bold;
     color: white;
+    font-size: 20px;
 }
 
 
@@ -361,11 +364,8 @@ hr {
     color: #FFF;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
     padding: 0.3em 0.5em;
-    background: #00bcd4;
-    border-top: solid 3px #00a3d4;
-    border-bottom: solid 3px #00a3d4;
-    border-left: none;
-    border-right: none;
+    background: black;
+    border: none;
     transition: .4s;
     width: 110px;
     height: 60px;
@@ -386,11 +386,8 @@ hr {
     color: #FFF;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
     padding: 0.3em 0.5em;
-    background: #64c474;
-    border-top: solid 3px #53a353;
-    border-bottom: solid 3px #53a353;
-    border-left: none;
-    border-right: none;
+    background: black;
+    border: none;
     transition: .4s;
     width: 110px;
     height: 65px;
@@ -408,12 +405,42 @@ hr {
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 0.3em 0.5em;
-    background: #62940c;
+    background: black;
     border: solid 1px black;
     transition: .4s;
     width: 200px;
     height: 40px;
     border-radius: 10px;
+}
+
+#examp_grass {
+    color: white;
+}
+
+#examp_grass > h4 {
+    margin: 3px;
+}
+
+#examp_grass > p {
+    margin: 0;
+}
+
+
+#examp {
+    float:right;
+    width: 30%;
+    color: white;
+    text-align: center;
+    background-color: rgba(163, 163, 163, 0.2);
+    margin-right: 20px;
+}
+
+#examp > h4 {
+    margin: 3px;
+}
+
+#examp > p {
+    margin: 0;
 }
