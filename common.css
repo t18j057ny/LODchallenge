@@ -1,0 +1,11 @@
+#map {
+    float: left;
+    width: 50%;
+    height: 700px;
+    margin-top: 70px;
+    margin-bottom: 0;
+    color: black;
+    border: solid;
+    border-color: black;
+    margin: 50px;
+}
