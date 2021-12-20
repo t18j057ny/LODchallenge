@@ -2,10 +2,11 @@
     float: left;
     width: 50%;
     height: 700px;
-    margin-top: 70px;
-    margin-bottom: 0;
+    margin-top: 50px;
+    margin-bottom: 0px;
     color: black;
-    border: solid;
+    border: solid 5px;
     border-color: black;
     margin: 50px;
+    border-radius: 10px;
 }
