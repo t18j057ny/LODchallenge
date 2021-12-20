@@ -140,6 +140,8 @@ function grass_map(id) {
 
     for (var i = 0; i < PopupContents[id].length; i++){
         for (let j=0; j<47; ++j){
+	    console.log(PopupContents[id][i]);
+            console.log(popupContents[j]);
             if (PopupContents[id][i] == popupContents[j]) {
                 geojsonFeature.push({    
                     "type": "Feature",
