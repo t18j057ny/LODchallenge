@@ -108,25 +108,25 @@ function request() {
     
 
     if (elem_water.checked) {
-	    path = "https://t18j057ny.github.io/test/data/stockpile_water.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/stockpile_water.csv";
         key = "water";
     } else if (elem_alphamai.checked) {
-	    path = "https://t18j057ny.github.io/test/data/stockpile_foods.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/stockpile_foods.csv";
         key = "alphamai";
     } else if (elem_soup.checked) {
-	    path = "https://t18j057ny.github.io/test/data/stockpile_soop.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/stockpile_soop.csv";
         key = "soup";
     } else if (elem_pan.checked) {
-	    path = "https://t18j057ny.github.io/test/data/stockpile_canned_bread.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/stockpile_canned_bread.csv";
         key = "bread";
     } else if (elem_.checked) {
-	    path = "https://t18j057ny.github.io/test/data/stockpile_men.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/stockpile_men.csv";
         key = "men";
     } else if (elem_men.checked) {
-	    path = "https://t18j057ny.github.io/test/data/stockpile_can.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/stockpile_can.csv";
         key = "can";
     } else if (elem_grass.checked) {
-	    path = "https://t18j057ny.github.io/test/data/wild_grass.csv";
+	    path = "https://t18j057ny.github.io/LODchallenge/data/wild_grass.csv";
         key = "grass";
     }
 
