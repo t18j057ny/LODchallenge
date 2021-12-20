@@ -2,7 +2,7 @@ function convertCSVtoArray(str) {
     let result = [];
     let tmp = str.split("\n");
 
-    for(let i=0; i<tmp.length; ++i) {
+    for(let i=1; i<tmp.length; ++i) {
         result[i] = tmp[i].split(',');
     }
     
