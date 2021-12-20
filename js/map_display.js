@@ -137,7 +137,7 @@ function grass_draw(data) {
 
 function grass_map(id) {
     var id = Number(id);
-    console.log(PopupContents[id]);
+    var map = L.map('map').setView([36.575,135.984], 5);
     var geojsonFeature = [];
     var popupContents = [];
 
