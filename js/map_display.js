@@ -149,7 +149,7 @@ function grass_map(id) {
                 geojsonFeature.push({    
                     "type": "Feature",
                     "properties": {
-                        "popupContent": popupContents[j]
+                        "popupContent": ken[j]
                     },
                     "geometry": {
                         "type": "Point",
