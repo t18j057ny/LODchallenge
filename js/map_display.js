@@ -32,17 +32,17 @@ function grass_request() {
     req.open("get", "https://t18j057ny.github.io/LODchallenge/data/wild_grass.csv", true);
     req.send(null);
     req.onload = function() {
-        search(convertCSVtoArray(req.responseText));
+        grass_search(convertCSVtoArray(req.responseText));
     }
 }
 
 
-function search(data) {
+function grass_search(data) {
     let textbox = document.getElementById("g_query");
     let query = textbox.value;
     let words = [query];//.replace(/["　"]/g, " ").split(" ",0);
 
-    clear()
+    grass_clear()
 
     for(let i=0; i<words.length; ++i) {
         let word = words[i];
@@ -51,7 +51,7 @@ function search(data) {
                 d = data[j][k];
                 if (d.indexOf(word) != -1) {
                     console.log(data[j]);
-                    draw(data[j]);
+                    grass_draw(data[j]);
                     break;
                 }
             }
@@ -72,7 +72,7 @@ function convertCSVtoArray(str) {
 }
 
 
-function clear() {
+function grass_clear() {
     let doc_count = document.getElementById("grass_count");
     let name = document.getElementById("grass_name");
     let parent = document.getElementById("grass_result_list");
@@ -83,7 +83,7 @@ function clear() {
 }
 
 
-function draw(data) {
+function grass_draw(data) {
     let dic = ["薬草の名称","アク抜き時の火力","薬用","害の有無","野草の分布","野草の生育地"];
     let name = document.getElementById("grass_name");
     let doc_count = document.getElementById("grass_count");
